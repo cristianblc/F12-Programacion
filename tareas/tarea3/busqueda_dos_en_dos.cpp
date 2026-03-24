@@ -1,5 +1,6 @@
-#include <algorithm>
+#include <iostream>
 #include <vector>
+#include <algorithm>
 using namespace std;
 
 int busqueda_dos_en_dos(vector<int>& lista, int n, int objetivo) {
@@ -21,4 +22,20 @@ int busqueda_dos_en_dos(vector<int>& lista, int n, int objetivo) {
     }
 
     return -1;
+}
+
+int main() {
+    int n, objetivo;
+    cin >> n;
+
+    vector<int> lista(n);
+    for (int i = 0; i < n; i++) {
+        cin >> lista[i];
+    }
+
+    cin >> objetivo;
+
+    cout << busqueda_dos_en_dos(lista, n, objetivo);
+
+    return 0;
 }
